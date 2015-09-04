@@ -7,7 +7,6 @@ namespace commons
 {
 
     //Documentation: https://www.netztest.at/en/OpenDataSpecification.html#response-2
-
     [DataContract]
     public class TestResponse
     {
@@ -160,15 +159,11 @@ namespace commons
         [DataMember]
         public string sim_mcc_mnc { get; set; }
 
-        //Todo: SpeedCurveItem
-        //[DataMember]
-        //public SpeedCurveItem xspeed_curve { get; set; }
+        [DataMember]
+        public SpeedCurveItem speed_curve { get; set; }
 
-
-        //Todo: SpeedCurveThreadwise
-        //[DataMember]
-        //public SpeedCurveThreadwise speed_curve_threadwise { get; set; }
-
+        [DataMember]
+        public SpeedCurveThreadwise speed_curve_threadwise { get; set; }
 
         [DataMember]
         public decimal? test_if_bytes_download { get; set; }
@@ -220,16 +215,94 @@ namespace commons
 
     }
 
-    //[DataContract]
-    //public class SpeedCurveItem
-    //{
+    [DataContract]
+    public class SpeedCurveItem
+    {
+        [DataMember]
+        public List<measurement_item> download { get; set; }
 
-    //}
+        [DataMember]
+        public List<measurement_item> upload { get; set; }
 
-    //[DataContract]
-    //public class SpeedCurveThreadwise
-    //{
+        [DataMember]
+        public List<signal_item> signal { get; set; }
 
-    //}
+        [DataMember]
+        public List<location_item> location { get; set; }
+    }
+
+   
+    [DataContract]
+    public class measurement_item
+    {
+        [DataMember]
+        public decimal? time_elapsed { get; set; }
+
+        [DataMember]
+        public decimal? bytes_total { get; set; }
+    }
+
+
+    [DataContract]
+    public class signal_item
+    {
+
+        [DataMember]
+        public decimal? time_elapsed { get; set; }
+
+        [DataMember]
+        public string network_type { get; set; }
+
+        [DataMember]
+        public string cat_technology { get; set; }
+
+
+        [DataMember]
+        public decimal? signal_strength { get; set; }
+
+        [DataMember]
+        public decimal? lte_rsrq { get; set; }
+
+        [DataMember]
+        public decimal? lte_rsrp { get; set; }
+    }
+
+    [DataContract]
+    public class location_item
+    {
+        [DataMember]
+        public decimal? time_elapsed { get; set; }
+
+        [DataMember]
+        public decimal? loc_accuracy { get; set; }
+
+        [DataMember(Name = "lat")]
+        public decimal? latitude { get; set; }
+
+        [DataMember(Name = "long")]
+        public decimal? longitude { get; set; }
+    }
+
+
+    [DataContract]
+    public class SpeedCurveThreadwise
+    {
+        [DataMember]
+        public List<measurement_threadwise> download { get; set; }
+
+        [DataMember]
+        public List<measurement_threadwise> upload { get; set; }
+    }
+
+    [DataContract]
+    public class measurement_threadwise
+    {
+        [DataMember]
+        public decimal? time_elapsed_ns { get; set; }
+
+        [DataMember]
+        public decimal? bytes_total { get; set; }
+    }
+
 
 }

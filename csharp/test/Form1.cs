@@ -21,7 +21,7 @@ namespace test
         private void button1_Click(object sender, EventArgs e)
         {
             TestRequest req = new TestRequest();
-            TestResponse resp = req.GET_OneTest("O211ec703-71db-4c32-b61a-77fc1bbf1705", "m7n8o9p10q11") as TestResponse;
+            TestResponse resp = req.GET_OneTest("O211ec703-71db-4c32-b61a-77fc1bbf1705", "m7n8o9p10q11", "1") as TestResponse;
         }
     }
 }

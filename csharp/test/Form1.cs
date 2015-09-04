@@ -20,8 +20,8 @@ namespace test
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SearchRequest req = new SearchRequest();
-            SearchResponse forecast = req.GET_OneTest(1764 , "a1b2c3d4e5f6") as SearchResponse;
+            TestRequest req = new TestRequest();
+            TestResponse resp = req.GET_OneTest("O211ec703-71db-4c32-b61a-77fc1bbf1705", "m7n8o9p10q11") as TestResponse;
         }
     }
 }

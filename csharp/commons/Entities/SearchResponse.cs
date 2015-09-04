@@ -5,6 +5,8 @@ using System.Xml.Serialization;
 
 namespace commons
 {
+    //Documentation:https://www.netztest.at/en/OpenDataSpecification.html#response
+
     [DataContract]
     public class SearchResponse
     {
@@ -14,7 +16,6 @@ namespace commons
         public List<SearchTestResponse> results { get; set; }
         [DataMember]
         public decimal? duration_ms { get; set; }
-       
     }
 
 

@@ -49,7 +49,9 @@
     </Compile>
     <Compile Include="Entities\Enums.cs" />
     <Compile Include="Entities\Constants.cs" />
+    <Compile Include="Entities\TestRequest.cs" />
     <Compile Include="Entities\SearchRequest.cs" />
+    <Compile Include="Entities\TestResponse.cs" />
     <Compile Include="Entities\SearchResponse.cs" />
     <Compile Include="Extensions\Extensions.cs" />
     <Compile Include="Helpers\RequestHelpers.cs" />

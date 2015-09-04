@@ -7,10 +7,6 @@ namespace commons
     {
         public static string FormatResponse(string _input)
         {
-            //_input = _input.Replace("isd-stations", "isd_stations");
-            //_input = _input.Replace("lamp-stations", "lamp_stations");
-            //_input = _input.Replace("metar-stations", "metar_stations");
-            //_input = _input.Replace("darksky-stations", "darksky_stations");
             return _input;
         }
 

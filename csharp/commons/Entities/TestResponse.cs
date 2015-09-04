@@ -160,7 +160,14 @@ namespace commons
         [DataMember]
         public string sim_mcc_mnc { get; set; }
 
-        //todo 2x!!
+        //Todo: SpeedCurveItem
+        //[DataMember]
+        //public SpeedCurveItem xspeed_curve { get; set; }
+
+
+        //Todo: SpeedCurveThreadwise
+        //[DataMember]
+        //public SpeedCurveThreadwise speed_curve_threadwise { get; set; }
 
 
         [DataMember]
@@ -208,7 +215,21 @@ namespace commons
         [DataMember]
         public decimal? zip_code { get; set; }
 
+ 
+
+
     }
 
+    //[DataContract]
+    //public class SpeedCurveItem
+    //{
+
+    //}
+
+    //[DataContract]
+    //public class SpeedCurveThreadwise
+    //{
+
+    //}
 
 }

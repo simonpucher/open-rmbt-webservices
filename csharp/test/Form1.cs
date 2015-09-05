@@ -20,7 +20,7 @@ namespace test
 
         private void button1_Click(object sender, EventArgs e)
         {
-            QosRequest req = new QosRequest();
+            Request req = new Request();
             QosResponse resp = req.GET_Qos("O56b5cc79-5669-4457-bce2-0aeaf3b7242f") as QosResponse;
         }
     }

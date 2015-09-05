@@ -20,8 +20,8 @@ namespace test
 
         private void button1_Click(object sender, EventArgs e)
         {
-            TestRequest req = new TestRequest();
-            TestResponse resp = req.GET_OneTest("O211ec703-71db-4c32-b61a-77fc1bbf1705", "m7n8o9p10q11", "1") as TestResponse;
+            QosRequest req = new QosRequest();
+            QosResponse resp = req.GET_Qos("O56b5cc79-5669-4457-bce2-0aeaf3b7242f") as QosResponse;
         }
     }
 }

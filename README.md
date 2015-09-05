@@ -1,4 +1,4 @@
-Open-RMBT Webservices
+Open-RMBT-Webservices
 =================
 
 c# Wrapper for the Open-RMBT Open Data Interface.
